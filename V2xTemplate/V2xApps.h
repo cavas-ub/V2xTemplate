@@ -35,6 +35,24 @@ struct VehData
 	long turning_indicator;
 };
 
+
+
+//tekst << veh.orient_heading << ";" << veh.position_x << ";" << veh.position_y << ";" << veh.position_z << ";" << veh.speed << ";" << veh.vehicle_id;
+
+
+struct BSMCoreData 
+{
+	
+	long vehicle_id;
+	double position_x;
+	double position_y;
+	double position_z;
+	double orient_heading;
+	double speed;
+	long brake_boost;	// 0 - unavailable, 1 - off, 2 - on;
+
+};
+
 string createBSMcoreData(VehData veh);
 
 VehData readVehDatafromString(string message);
